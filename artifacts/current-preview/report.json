@@ -1,0 +1,178 @@
+{
+  "url": "http://127.0.0.1:5173/?test=1&seed=wildflower&quality=retina",
+  "mode": "status",
+  "timestamp": "2026-11-13T08:18:28.374Z",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "dpr": 1,
+  "renderer": {
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1 Max, Unspecified Version)",
+    "vendor": "Google Inc. (Apple)",
+    "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+  },
+  "checks": [
+    {
+      "name": "correct candidate and art reference",
+      "passed": true,
+      "details": "painted-valley-0.2.0"
+    },
+    {
+      "name": "no browser/shader errors",
+      "passed": true,
+      "details": "[]"
+    }
+  ],
+  "passed": true,
+  "errors": [],
+  "metrics": {
+    "version": "painted-valley-0.2.0",
+    "reference": "blendi/painted-valley",
+    "seed": "wildflower",
+    "simulatedSeconds": 0,
+    "measurement": "deterministic stepping; FPS invalid",
+    "frames": 3,
+    "sampleCount": 0,
+    "fps": 0,
+    "frameMs": {
+      "mean": 0,
+      "p50": 0,
+      "p95": 0,
+      "p99": 0
+    },
+    "submitMs": {
+      "p50": 2.300000000745058,
+      "p95": 219.20000000298023
+    },
+    "resolution": "1440 × 900",
+    "cssResolution": "1440 × 900",
+    "nativeDpr": 1,
+    "pixelRatio": 1,
+    "quality": "retina",
+    "drawCalls": 279,
+    "triangles": 2335929,
+    "memory": {
+      "geometries": 180,
+      "textures": 36
+    },
+    "world": {
+      "terrainChunks": 137,
+      "farHorizon": true,
+      "farBuildRow": -1,
+      "pendingVegetation": 0,
+      "roadChunks": 23,
+      "pendingChunks": 0,
+      "trees": 194,
+      "renderedTrees": 194,
+      "roadPaintMarks": 9991,
+      "generatedChunks": 137,
+      "retiredChunks": 0,
+      "mapReady": true,
+      "mapBuilding": false,
+      "farBuilding": false,
+      "samplerWorker": true,
+      "completedSamplingJobs": 2,
+      "mapBuildRow": -1,
+      "mapResolution": 768,
+      "mapBounds": {
+        "x": -96.12516297262061,
+        "z": -672.8761408083443,
+        "span": 768
+      },
+      "origin": {
+        "x": 512,
+        "z": 0
+      },
+      "maxGenerationMs": 0
+    },
+    "origin": {
+      "x": 512,
+      "z": 0
+    },
+    "vehicle": {
+      "x": 340.7916272912922,
+      "y": 74.66973123100028,
+      "z": -239.6344244668206,
+      "s": 240,
+      "heading": 0.20452033828400892,
+      "speed": 0,
+      "steering": 0,
+      "pitch": 0.005032882241500235,
+      "roll": 0,
+      "distance": 0,
+      "lateral": 1.8,
+      "offroad": false,
+      "collision": 0
+    },
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+  },
+  "frames": [
+    {
+      "filename": "00-arrival.png",
+      "state": {
+        "ready": true,
+        "mode": "parked",
+        "camera": "driver seat",
+        "seed": "wildflower",
+        "coordinates": "+Y up,+X east,forward -Z; metres",
+        "automatic": false,
+        "muted": false,
+        "car": {
+          "x": 340.7916272912922,
+          "y": 74.66973123100028,
+          "z": -239.6344244668206,
+          "s": 240,
+          "heading": 0.20452033828400892,
+          "speed": 0,
+          "steering": 0,
+          "pitch": 0.005032882241500235,
+          "roll": 0,
+          "distance": 0,
+          "lateral": 1.8,
+          "offroad": false,
+          "collision": 0
+        },
+        "look": {
+          "yaw": 0,
+          "pitch": 0
+        },
+        "origin": {
+          "x": 512,
+          "z": 0
+        },
+        "stream": {
+          "terrainChunks": 137,
+          "farHorizon": true,
+          "farBuildRow": -1,
+          "pendingVegetation": 0,
+          "roadChunks": 23,
+          "pendingChunks": 0,
+          "trees": 194,
+          "renderedTrees": 194,
+          "roadPaintMarks": 9991,
+          "generatedChunks": 137,
+          "retiredChunks": 0,
+          "mapReady": true,
+          "mapBuilding": false,
+          "farBuilding": false,
+          "samplerWorker": true,
+          "completedSamplingJobs": 2,
+          "mapBuildRow": -1,
+          "mapResolution": 768,
+          "mapBounds": {
+            "x": -96.12516297262061,
+            "z": -672.8761408083443,
+            "span": 768
+          },
+          "origin": {
+            "x": 512,
+            "z": 0
+          },
+          "maxGenerationMs": 0
+        },
+        "renderer": "painted-valley-0.2.0"
+      }
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "record_type": "public_provenance_summary",
+  "date": "2026-11-13",
+  "assets": [
+    {
+      "file": "wanderer-sunburst-exterior-three-views.png",
+      "purpose": "three-view exterior",
+      "requested_model": "SUNBURST",
+      "recorded_model_version": "gpt-image-2.6-sunburst",
+      "prompt_file": "exterior-prompt.txt",
+      "bytes": 2317310,
+      "sha256": "e1f344671d1884034eb37da8388fb028ceb05818a952f2638927e60e7b5acd33",
+      "evidence": "Archived local submission receipt records the model version. The original raw receipt is not published."
+    },
+    {
+      "file": "wanderer-sunburst-interior-four-views.png",
+      "purpose": "four-view interior",
+      "requested_model": "SUNBURST",
+      "recorded_model_version": "gpt-image-2.6-sunburst",
+      "prompt_file": "interior-prompt.txt",
+      "bytes": 2774735,
+      "sha256": "897f8a74676fc2583c0d9ec33b7c5368ae1ac321b2029d7b31fe434fee5eb806",
+      "evidence": "Model version was recorded in the development log; a complete separate interior service receipt was not archived in this project. The output image and prompt are preserved."
+    }
+  ],
+  "note": "Original service session identifiers, job identifiers and service responses are omitted. An earlier incorrectly routed Flare attempt is not included or used. These sheets are design references; they are not completed 3D assets."
+}

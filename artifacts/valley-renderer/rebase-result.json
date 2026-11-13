@@ -1,0 +1,14 @@
+{
+  "repeat": {
+    "mean_absolute_error_255": 0.0,
+    "pixel_change_fraction": 0.0,
+    "pixels_changed_gt_8": 0.0,
+    "max_abs_error": 0.0
+  },
+  "rebased": {
+    "mean_absolute_error_255": 0.006969762731481481,
+    "pixel_change_fraction": 0.009852430555555555,
+    "pixels_changed_gt_8": 8.7890625e-05,
+    "max_abs_error": 94.0
+  }
+}

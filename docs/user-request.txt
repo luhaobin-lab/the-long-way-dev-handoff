@@ -1,0 +1,494 @@
+Build me a visually extraordinary, first-person 3D road trip driving game in Three.js, combining three specific references:
+
+**1. VISUAL RENDERING — Blendi's Oil Paint**
+
+https://patch.gg/blendi/oil-paint
+
+**2. PROCEDURAL WORLD GENERATION — Slow Roads**
+
+https://slowroads.io/
+
+**3. FIRST-PERSON DRIVING — Euro Truck Simulator 2**
+
+https://store.steampowered.com/app/227300/Euro_Truck_Simulator_2/
+
+The GOAL is simple:
+
+**Take the infinite procedural terrain and road-generation experience of Slow Roads, render the entire world using the actual painterly rendering techniques from Blendi's Oil Paint, and let the player experience everything from inside a vehicle, like Euro Truck Simulator 2.**
+
+Imagine driving a camper van through an endless, beautiful, three-dimensional oil painting.
+
+Not a tech demo. Not a rough prototype. Build a beautiful, playable, continuously generated driving experience with professional-quality rendering and satisfying first-person immersion.
+
+# Non-negotiable constraints
+
+**Stack:** Vite + Three.js, TypeScript, ES modules, WebGL2. Preserve compatibility with the original Oil Paint renderer, which was built using Three.js 0.186.
+
+The complete project must run with:
+
+`npm install && npm run dev`
+
+**Source-first development:** Before implementing anything, visit all three references and study their actual content. Do not attempt to recreate these systems from vague descriptions when existing documentation or appropriately licensed source code is available.
+
+**Assets:** Generate the world, road, vegetation, vehicle, and cabin geometry procedurally wherever practical. Reuse the MIT-licensed Oil Paint rendering code and compatible CC0 assets if useful, preserving their license notices. Do not depend on paid asset packs or unlicensed models.
+
+**Performance:** Target a stable 60fps on a MacBook M5 Pro running Chrome, with Retina-resolution rendering. Use chunk streaming, geometry instancing, LOD, efficient shader execution, and adaptive resolution as needed.
+
+Performance and visual quality are equally important.
+
+# Step 1 — Research and extract the reference systems
+
+This is mandatory. Do not begin building the game until you have investigated the references.
+
+## Reference A: Blendi's Oil Paint
+
+https://patch.gg/blendi/oil-paint
+
+This reference defines the FINAL ART DIRECTION.
+
+The project publicly documents its rendering architecture and identifies its code as MIT-licensed.
+
+Read its README, source files, shader implementations, rendering pipeline, and technical documentation.
+
+Study and reuse the actual renderer wherever the license permits.
+
+Important source areas include:
+
+- `src/oilpaint/dabs.js`
+- `src/oilpaint/brush.js`
+- `src/oilpaint/common.js`
+- `src/oilpaint/ground.js`
+- `src/oilpaint/pins.js`
+- `src/oilpaint/shade.js`
+- `src/oilpaint/finish.js`
+
+Understand how the renderer produces actual painted brushstrokes attached to 3D geometry.
+
+Study its world-space brushstroke placement, color mixing, ground rendering, atmospheric effects, shading, and distance-dependent stroke density.
+
+**Do not replace this system with a generic cartoon shader, simple cel shading, or a screen-space oil-paint filter.**
+
+The defining feature is that the world itself is constructed and rendered through brushstrokes that remain attached to the geometry as the camera moves.
+
+Adapt this rendering architecture to our procedural road-trip environment.
+
+Preserve the core visual behavior of the original Oil Paint renderer while extending it to support much larger, continuously generated landscapes.
+
+## Reference B: Slow Roads
+
+https://slowroads.io/
+
+This reference defines the PROCEDURAL WORLD GENERATION SYSTEM.
+
+Study the game, its official documentation, publicly available technical explanations, and any source code the original author has explicitly released for reuse.
+
+Investigate:
+
+- How infinite terrain is generated.
+- How heightmaps are produced.
+- How road paths are generated through the landscape.
+- How terrain and road geometry are integrated.
+- How terrain chunks are loaded and unloaded.
+- How distant landscapes are rendered.
+- How repeated terrain patterns are avoided.
+- How continuous driving is supported.
+- How performance and memory usage are controlled.
+
+If authorized original source code is available under a suitable license, study and reuse the relevant algorithms according to that license.
+
+If the original implementation is not publicly licensed, analyze its documented methods and observable behavior, then independently implement equivalent procedural-generation systems.
+
+Do not confuse third-party clones with the original author's source code or assume proprietary browser bundles are open source.
+
+**The GOAL is to reproduce the procedural behavior and engineering quality of Slow Roads, not merely create a landscape that vaguely resembles it.**
+
+The final game should retain the same essential experience: an endlessly extending road traveling through continuously generated scenery.
+
+## Reference C: Euro Truck Simulator 2
+
+This reference defines the FIRST-PERSON DRIVING EXPERIENCE.
+
+Study actual gameplay footage and screenshots showing the interior cabin camera.
+
+Focus on:
+
+- Driver-seat camera placement.
+- Windshield framing and visibility.
+- Steering wheel movement.
+- Dashboard and instrument placement.
+- Natural vehicle motion and suspension.
+- Camera vibration and stabilization.
+- The relationship between road curvature and perceived vehicle movement.
+- Immersive visibility of the environment from inside the cabin.
+
+We are not reproducing Euro Truck Simulator 2's entire simulation.
+
+We only need its convincing first-person driving perspective and feeling of physically sitting inside a vehicle.
+
+# Step 2 — Infinite procedural terrain and roads
+
+Build a world-generation system based on the functional principles demonstrated by Slow Roads.
+
+For the initial version, use only ONE environmental biome:
+
+**Lush green grasslands, rolling hills, wide valleys, open plains, scattered trees, distant mountains, and beautiful skies.**
+
+The landscape should feel enormous, peaceful, naturally composed, and endlessly explorable.
+
+Implement:
+
+- Deterministic terrain generation using world seeds.
+- Seamless infinite terrain streaming.
+- Natural large-scale heightmap generation.
+- Rolling hills, valleys, distant ridgelines, and open plains.
+- Continuous terrain chunk loading and unloading.
+- Procedural vegetation placement.
+- Distant mountain rendering and atmospheric depth.
+- Smooth LOD transitions.
+- Stable performance during extended driving.
+
+The terrain must not look like raw Perlin noise covered with green material.
+
+Use deliberate landscape composition to create beautiful, memorable views.
+
+Occasionally open up the terrain to reveal enormous valleys, distant mountain ranges, wide fields, and spectacular panoramic views.
+
+## Infinite road generation
+
+Generate a single continuous, naturally winding road that the player can drive along forever.
+
+The road must:
+
+- Extend continuously as the player drives.
+- Follow the landscape naturally.
+- Have smooth turns, hills, straights, and elevation transitions.
+- Maintain a reasonable width and safe driving gradients.
+- Integrate seamlessly with the terrain.
+- Include natural road shoulders and roadside vegetation.
+- Never disconnect, float above the ground, or intersect hills.
+- Remain deterministic and consistent across chunk boundaries.
+
+Road routing and terrain generation must be designed together.
+
+Do not generate terrain first and simply place a road mesh on top.
+
+The terrain must adapt naturally to the road where necessary.
+
+**The world should behave like Slow Roads, but visually look like a moving oil painting.**
+
+# Step 3 — Apply the Oil Paint rendering system to everything
+
+This is the most important artistic requirement.
+
+Use Blendi's Oil Paint project as the primary technical and visual foundation.
+
+Every significant visible surface should share a coherent painterly rendering language.
+
+Apply the Oil Paint rendering system to:
+
+- Terrain and grasslands.
+- Mountains and rocky surfaces.
+- Trees, leaves, flowers, and shrubs.
+- Road pavement and road shoulders.
+- Clouds and distant atmospheric scenery.
+- Vehicle bodywork.
+- Dashboard, steering wheel, and cabin interior.
+
+Study how the original renderer handles world-anchored brushstrokes, light/halftone/shadow palettes, stroke thickness, distance-dependent simplification, and stable rendering during movement.
+
+The result should have:
+
+- Distinct, physically expressive oil-paint brushstrokes.
+- Rich painterly color variation.
+- Visible brush direction following surface shapes.
+- Soft, illustrated lighting.
+- Beautiful atmospheric perspective.
+- Thick, layered, hand-painted surface detail.
+- The visual character of a traditional oil painting brought to life in 3D.
+
+The brushstrokes must remain stable while driving.
+
+**No swimming textures, flickering paint, unstable brushstrokes, temporal smearing, or distracting LOD transitions.**
+
+The final result must not resemble ordinary Three.js graphics with an oil-paint filter applied afterward.
+
+It should preserve the actual artistic rendering approach demonstrated by the Patch reference.
+
+Use a beautiful storybook-inspired grassland palette for the initial environment, while preserving the renderer's distinctive brushstroke behavior.
+
+# Step 4 — First-person vehicle and driving experience
+
+The player must start inside a driveable vehicle.
+
+Use Euro Truck Simulator 2 as the reference for camera placement, interior proportions, dashboard readability, and immersion.
+
+For the initial version, create a simple but beautiful camper van or road-trip vehicle.
+
+The vehicle must have a recognizable 3D interior, including:
+
+- Steering wheel.
+- Dashboard.
+- Windshield frame.
+- Side windows.
+- Driver-seat viewpoint.
+- Simple speedometer.
+- Basic interior details.
+
+The entire interior should be stylized to fit the Oil Paint rendering aesthetic.
+
+Implement:
+
+- First-person driving as the default perspective.
+- Smooth acceleration, braking, and steering.
+- Natural suspension movement.
+- Convincing vehicle response to road elevation.
+- Steering wheel animation synchronized with player input.
+- Smooth camera movement that avoids motion sickness.
+- Mouse-controlled free look from inside the cabin.
+- Natural visibility of the road and surrounding scenery.
+- Basic collision and ground-contact behavior.
+
+Use a readable windshield view without heavy reflections or transparency effects that conflict with the Oil Paint renderer.
+
+Keyboard controls:
+
+- W / S — Accelerate and brake.
+- A / D — Steer.
+- Mouse — Look around inside the cabin.
+- R — Reset vehicle.
+- C — Optional exterior camera for debugging.
+
+The first-person camera must be the primary player experience.
+
+**This is a peaceful road trip, not a racing game.**
+
+No AI traffic, missions, economy systems, pedestrians, or complex vehicle customization are required yet.
+
+# Step 5 — Build an automated screenshot and driving-test harness
+
+Before visual polishing, build a repeatable testing system.
+
+Use Playwright to automatically launch the game, drive through procedurally generated terrain, and capture real screenshots.
+
+The test system must support:
+
+- Fixed procedural seeds.
+- Reproducible road locations.
+- Automated driving along generated roads.
+- First-person cabin screenshots.
+- Optional exterior screenshots for terrain inspection.
+- Multiple camera angles.
+- Performance measurements.
+- Extended driving sessions.
+- Capturing image sequences to detect temporal instability.
+
+Use real browser-rendered screenshots, not mockups or simulated previews.
+
+Every claimed visual improvement must be supported by actual captured frames.
+
+# Step 6 — Independent visual critic and blind testing
+
+Create a dedicated visual critic sub-agent.
+
+Its sole responsibility is to identify differences between our rendering and the reference projects.
+
+Use two independent evaluation tracks.
+
+## Visual track — Oil Paint
+
+Compare our rendered scenes against the original Blendi Oil Paint project.
+
+The goal is to evaluate:
+
+- Brushstroke quality.
+- Brushstroke placement and direction.
+- Paint thickness and visual texture.
+- Color mixing.
+- Shadow rendering.
+- Atmospheric depth.
+- Surface cohesion.
+- Visual stability during camera movement.
+- Overall resemblance to the reference rendering technique.
+
+Use comparable environmental subjects and camera conditions whenever possible.
+
+Do not judge success purely by matching the original demo's colors or scene composition.
+
+The goal is to match its rendering quality and distinctive oil-paint character.
+
+Anonymize reference and generated frames during blind evaluation wherever possible.
+
+## Technical track — Slow Roads
+
+Compare our driving and procedural generation against Slow Roads.
+
+Evaluate:
+
+- Road continuity.
+- Road curvature.
+- Terrain coherence.
+- Road-terrain integration.
+- Seamless streaming.
+- Landscape variation.
+- Horizon consistency.
+- Driving stability.
+- Performance over extended distances.
+
+Also evaluate the first-person cabin camera against Euro Truck Simulator 2 gameplay footage for visibility, vehicle motion, and immersion.
+
+The critic must identify specific, actionable deficiencies.
+
+It must not approve work simply because a system functions.
+
+# Step 7 — Mandatory /loop
+
+Run a continuous implementation, testing, and refinement cycle.
+
+**Research → Implement → Run → Drive → Screenshot → Blind Compare → Identify Defects → Refine → Run Again.**
+
+Apply `/loop` separately to each major subsystem:
+
+1. Infinite procedural terrain.
+2. Infinite road generation.
+3. Terrain and road integration.
+4. Oil Paint shaders and brushstroke rendering.
+5. Procedural grass, vegetation, and environmental detail.
+6. Lighting, atmosphere, and scenic composition.
+7. First-person driving and cabin rendering.
+8. Performance, memory, and visual stability.
+
+The visual critic should compare actual screenshots and frame sequences against the corresponding references.
+
+If the terrain feels generic, refine the terrain.
+
+If the road looks unnatural, improve the routing and landscape integration.
+
+If the paint looks like a post-processing filter, return to the original Oil Paint source and correct the rendering architecture.
+
+If brushstrokes flicker while driving, prioritize temporal stability before adding detail.
+
+If the cabin obstructs too much of the scenery, improve the camera and interior composition.
+
+If the world becomes repetitive, improve the terrain-generation rules.
+
+**Do not add more features to compensate for weak fundamentals.**
+
+Continue iterating until the defined quality targets are met or further progress is blocked by a specific, documented limitation.
+
+Report actual remaining defects rather than inventing successful test results.
+
+# Step 8 — Parallel sub-agent development
+
+Fan out specialized sub-agents where available.
+
+Assign:
+
+**Agent 1 — Source Research and Integration**
+
+Study the Patch source, Slow Roads documentation, and Euro Truck Simulator 2 references. Verify licensing and extract usable technical information.
+
+**Agent 2 — Procedural Terrain**
+
+Implement infinite world generation, heightmaps, terrain streaming, and LOD.
+
+**Agent 3 — Procedural Roads**
+
+Implement infinite road routing, continuous road geometry, and terrain integration.
+
+**Agent 4 — Oil Paint Rendering**
+
+Integrate and adapt the original Oil Paint rendering system to our world and vehicle.
+
+**Agent 5 — Environment Art**
+
+Develop procedural grass, trees, flowers, rocks, mountains, and composition rules.
+
+**Agent 6 — First-Person Driving**
+
+Develop the vehicle, cabin interior, camera, physics, and controls.
+
+**Agent 7 — Visual Critic**
+
+Run automated screenshot comparisons, blind tests, and visual-quality evaluations.
+
+**Agent 8 — Performance**
+
+Optimize shaders, geometry streaming, frame time, and long-session stability.
+
+Define a shared architecture and interfaces before parallel development.
+
+Each agent must provide working code and evidence of testing.
+
+# Step 9 — Playable milestones
+
+Build incrementally, keeping the project runnable at every stage.
+
+**Milestone 1 — Source research**
+
+Read the reference materials, verify accessible code, and establish the project architecture.
+
+**Milestone 2 — Infinite terrain**
+
+Generate an endless, seamless grassland landscape with hills, valleys, and distant mountains.
+
+**Milestone 3 — Infinite road**
+
+Integrate a continuous, naturally winding road with the procedural terrain.
+
+**Milestone 4 — First-person driving**
+
+Create a functional vehicle with cabin controls and a stable driver-seat camera.
+
+**Milestone 5 — Oil Paint integration**
+
+Apply the real Oil Paint rendering architecture to the terrain, road, vegetation, and cabin.
+
+**Milestone 6 — Environment quality**
+
+Improve grass, vegetation, atmospheric depth, mountain silhouettes, colors, and painterly composition.
+
+**Milestone 7 — Automated visual iteration**
+
+Run repeated screenshot comparisons against Blendi's Oil Paint and driving tests against Slow Roads.
+
+**Milestone 8 — Extended driving and optimization**
+
+Verify consistent rendering quality, seamless terrain streaming, smooth driving, and frame-rate stability over long sessions.
+
+Do not discard working core systems when moving between milestones.
+
+# Final GOAL
+
+The finished experience must combine these three references into a single coherent game:
+
+**Slow Roads provides the procedural world-generation experience.**
+
+**Blendi's Oil Paint provides the visual rendering language.**
+
+**Euro Truck Simulator 2 provides the first-person driving perspective.**
+
+The player should sit inside a beautiful, stylized camper van and drive along an endlessly extending countryside road.
+
+Outside the windshield is a world of green valleys, rolling hills, forests, distant mountains, soft skies, and beautiful scenery — all constructed and rendered with expressive oil-paint brushstrokes.
+
+The world should look like a genuine three-dimensional oil painting, not a normal 3D game with a filter.
+
+The road should continue naturally forever.
+
+The terrain should never visibly end.
+
+The player should never encounter obvious chunk seams, repetitive landscapes, broken roads, or unstable paint effects.
+
+Every moment of driving should feel like moving through a living painting.
+
+**The final GOAL is not three separate demonstrations. It is one fully integrated experience that combines the strongest qualities of all three references.**
+
+Deliver a complete Three.js project with clean architecture, properly documented rendering and generation code, preserved third-party license notices, automated tests, screenshots, and a working:
+
+`npm install && npm run dev`
+
+Do not claim completion without running the game, capturing real screenshots, and testing the integration.
+
+**Make the world worth looking at. Make the road worth following. Make the painting come alive.**
+
+Ultracode.

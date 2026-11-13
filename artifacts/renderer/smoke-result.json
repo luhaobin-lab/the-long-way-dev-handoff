@@ -1,0 +1,22 @@
+{
+  "errors": [],
+  "info": {
+    "render": {
+      "frame": 4,
+      "calls": 18,
+      "triangles": 429888,
+      "points": 0,
+      "lines": 0
+    },
+    "memory": {
+      "geometries": 8,
+      "textures": 8
+    },
+    "vendor": "WebKit WebGL"
+  },
+  "notes": [
+    "Repeated render uses same state and time",
+    "Rebased all scene objects/camera by512m X and-512m Z while absolute anchors remain unchanged",
+    "Image comparison is separate; this is not temporal motion testing"
+  ]
+}

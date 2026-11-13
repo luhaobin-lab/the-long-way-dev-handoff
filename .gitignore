@@ -1,0 +1,34 @@
+node_modules/
+dist/
+.DS_Store
+logs/*.log
+
+# Local environments, external source checkouts and credentials
+.tools/
+.venv/
+__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example
+tools/blender-mcp/
+.publish/
+
+# Research-only downloads; retain source manifests and public source notes.
+references/*
+!references/README.md
+!references/*-source-manifest.json
+
+# Private generation service responses and machine-specific capture wrapper.
+assets/vehicle/reference/generation-receipts.json
+artifacts/biome-blend/run-skill-client.mjs
+
+# Keep a compact set of visual evidence; all test reports remain published.
+artifacts/**/*.png
+!artifacts/handoff-smoke/01-driver-seat.png
+!artifacts/biomes-v1/*-cabin.png
+!artifacts/climate/spring-noon-01.png
+!artifacts/climate/summer-noon-01.png
+!artifacts/climate/autumn-noon-01.png
+!artifacts/climate/winter-noon-01.png
+!artifacts/climate/summer-midnight-02.png

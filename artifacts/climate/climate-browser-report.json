@@ -1,0 +1,283 @@
+{
+  "errors": [],
+  "states": [
+    {
+      "hour": 13,
+      "seasonPhase": 0.25,
+      "day": 0,
+      "autoTime": false,
+      "dayLengthSeconds": 1080,
+      "yearLengthDays": 8,
+      "season": "summer",
+      "seasonWeights": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "sunDirection": [
+        -0.32947146855111586,
+        0.9138167404264519,
+        -0.23746055741353303
+      ],
+      "moonDirection": [
+        0.4523473819628254,
+        -0.8794077989451818,
+        0.14840407402011718
+      ],
+      "solarElevation": 66.03824346739906,
+      "night": 0,
+      "snowStrength": 0,
+      "leafRetention": 1,
+      "daylightHours": 15.300267340948938
+    },
+    {
+      "hour": 13,
+      "seasonPhase": 0.5,
+      "day": 0,
+      "autoTime": false,
+      "dayLengthSeconds": 1080,
+      "yearLengthDays": 8,
+      "season": "autumn",
+      "seasonWeights": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "sunDirection": [
+        -0.6709884604742247,
+        0.6948288910247251,
+        -0.25881904510252074
+      ],
+      "moonDirection": [
+        0.7600868863186921,
+        -0.629246667583622,
+        0.1622237854978811
+      ],
+      "solarElevation": 44.01358360451634,
+      "night": 0,
+      "snowStrength": 0,
+      "leafRetention": 0.88,
+      "daylightHours": 12
+    },
+    {
+      "hour": 13,
+      "seasonPhase": 0.75,
+      "day": 0,
+      "autoTime": false,
+      "dayLengthSeconds": 1080,
+      "yearLengthDays": 8,
+      "season": "winter",
+      "seasonWeights": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "sunDirection": [
+        -0.9017616795284181,
+        0.3611625077536988,
+        -0.23746055741353297
+      ],
+      "moonDirection": [
+        0.945068666812698,
+        -0.297056181606945,
+        0.13639222843685528
+      ],
+      "solarElevation": 21.17160677627793,
+      "night": 0,
+      "snowStrength": 1,
+      "leafRetention": 0.040000000000000036,
+      "daylightHours": 8.699732659051062
+    },
+    {
+      "hour": 13,
+      "seasonPhase": 0,
+      "day": 0,
+      "autoTime": false,
+      "dayLengthSeconds": 1080,
+      "yearLengthDays": 8,
+      "season": "spring",
+      "seasonWeights": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "sunDirection": [
+        -0.6709884604742247,
+        0.6948288910247251,
+        -0.25881904510252074
+      ],
+      "moonDirection": [
+        0.7600868863186921,
+        -0.629246667583622,
+        0.1622237854978811
+      ],
+      "solarElevation": 44.01358360451634,
+      "night": 0,
+      "snowStrength": 0,
+      "leafRetention": 1,
+      "daylightHours": 12
+    },
+    {
+      "hour": 5,
+      "seasonPhase": 0.25,
+      "day": 0,
+      "autoTime": false,
+      "dayLengthSeconds": 1080,
+      "yearLengthDays": 8,
+      "season": "summer",
+      "seasonWeights": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "sunDirection": [
+        0.4510990693498211,
+        0.10551228637822091,
+        0.8862148650609316
+      ],
+      "moonDirection": [
+        -0.32054814658405817,
+        -0.06342464815216824,
+        -0.9451064488872661
+      ],
+      "solarElevation": 6.056682363881771,
+      "night": 0,
+      "snowStrength": 0,
+      "leafRetention": 1,
+      "daylightHours": 15.300267340948938
+    },
+    {
+      "hour": 19.5,
+      "seasonPhase": 0.25,
+      "day": 0,
+      "autoTime": false,
+      "dayLengthSeconds": 1080,
+      "yearLengthDays": 8,
+      "season": "summer",
+      "seasonWeights": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "sunDirection": [
+        0.5300419525990137,
+        0.023764537715652456,
+        -0.8476383516761062
+      ],
+      "moonDirection": [
+        -0.4758885502666831,
+        0.01884263441932051,
+        0.8793037261681621
+      ],
+      "solarElevation": 1.3617359078324651,
+      "night": 0.011701398146700459,
+      "snowStrength": 0,
+      "leafRetention": 1,
+      "daylightHours": 15.300267340948938
+    },
+    {
+      "hour": 0,
+      "seasonPhase": 0.25,
+      "day": 0,
+      "autoTime": false,
+      "dayLengthSeconds": 1080,
+      "yearLengthDays": 8,
+      "season": "summer",
+      "seasonWeights": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "sunDirection": [
+        0.9234782808576824,
+        -0.38365070674265633,
+        1.1235854434322587e-16
+      ],
+      "moonDirection": [
+        -0.8802593519896285,
+        0.46413513031012893,
+        -0.09860047690959209
+      ],
+      "solarElevation": -22.560000000000002,
+      "night": 1,
+      "snowStrength": 0,
+      "leafRetention": 1,
+      "daylightHours": 15.300267340948938
+    }
+  ],
+  "performance": {
+    "measurement": "15-second real-time requestAnimationFrame in isolated source tree/grass/sky fixture; not full-game driving",
+    "frames": 902,
+    "sampleCount": 811,
+    "fps": 60.00251551852975,
+    "frameMs": {
+      "p50": 16.69999999999891,
+      "p95": 16.799999999999272,
+      "p99": 16.80000000000109
+    },
+    "submitMs": {
+      "p50": 1,
+      "p95": 2.5
+    },
+    "drawingBuffer": [
+      2880,
+      1800
+    ],
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1 Max, Unspecified Version)",
+    "draw": {
+      "frame": 11925,
+      "calls": 155,
+      "triangles": 1471906,
+      "points": 0,
+      "lines": 0
+    },
+    "memory": {
+      "geometries": 24,
+      "textures": 34
+    },
+    "climate": {
+      "hour": 15.83368888888647,
+      "seasonPhase": 0.25173796296299056,
+      "day": 0,
+      "autoTime": true,
+      "dayLengthSeconds": 1080,
+      "yearLengthDays": 8,
+      "season": "summer",
+      "seasonWeights": [
+        0,
+        0.9998556872090726,
+        0.00014431279092739886,
+        0
+      ],
+      "sunDirection": [
+        -0.05626344263438815,
+        0.6308693319085796,
+        -0.7738464389529419
+      ],
+      "moonDirection": [
+        0.1914277782338802,
+        -0.6417031333514279,
+        0.7426792674953299
+      ],
+      "solarElevation": 39.114289428545064,
+      "night": 0,
+      "snowStrength": 0,
+      "leafRetention": 0.9999826824650887,
+      "daylightHours": 15.300031947436949
+    },
+    "cloudPendingStrips": 27
+  },
+  "hashes": {
+    "src/render/Climate.ts": "6c910d2a1c03d807a4d8527eb4b820526798afb34f7d9c4712038c4845038846",
+    "src/render/ValleyPainter.ts": "d719b8f078b896a0d0c7091376abbd5c08039ddc4e2eb88a6a369fd1ed518399",
+    "src/render/vendor/painted-valley/valley/sky.js": "8d0a0259f3e9a7a0b66c15439584d280dc887503da1954ea626df925279ef2e8",
+    "src/render/vendor/painted-valley/lib/glsl.js": "3b9f7a260abb967abcdf0ea59d826d4df5008776792b2f62f8ffe0b0adde0f85"
+  }
+}

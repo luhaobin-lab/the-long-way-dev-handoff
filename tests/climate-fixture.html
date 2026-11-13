@@ -1,0 +1,19 @@
+<!doctype html><html><head><meta charset="UTF-8"><link rel="icon" href="data:,"><style>body{margin:0}canvas{display:block}</style></head><body><script type="module">
+import * as THREE from '/node_modules/three/build/three.module.js';
+import {ValleyPainter} from '/src/render/ValleyPainter.ts';
+import {ValleyTreeBatches} from '/src/world/trees.ts';
+const renderer=new THREE.WebGLRenderer({antialias:false});renderer.setSize(innerWidth,innerHeight);document.body.appendChild(renderer.domElement);
+const painter=new ValleyPainter(renderer),scene=new THREE.Scene(),camera=new THREE.PerspectiveCamera(65,innerWidth/innerHeight,.075,24000);camera.position.set(0,2.4,8);camera.lookAt(0,4,-35);camera.updateMatrixWorld(true);
+const N=257,span=512,heightsData=new Float32Array(N*N),landData=new Uint8Array(N*N*4),biomeData=new Uint8Array(N*N*4),climateData=new Uint8Array(N*N*4);
+for(let j=0;j<N;j++)for(let i=0;i<N;i++){const k=(i+j*N)*4;landData[k+2]=150;biomeData[k+3]=255;climateData[k]=190;climateData[k+1]=15;}
+const heights=new THREE.DataTexture(heightsData,N,N,THREE.RedFormat,THREE.FloatType);heights.minFilter=heights.magFilter=THREE.LinearFilter;heights.needsUpdate=true;
+const land=new THREE.DataTexture(landData,N,N);land.minFilter=land.magFilter=THREE.LinearFilter;land.needsUpdate=true;
+const biome=new THREE.DataTexture(biomeData,N,N);biome.needsUpdate=true;const climate=new THREE.DataTexture(climateData,N,N);climate.minFilter=climate.magFilter=THREE.LinearFilter;climate.needsUpdate=true;
+painter.setLandMaps(heights,land,-256,-256,span,N);painter.setBiomeMaps(biome,climate);
+const terrainGeo=new THREE.PlaneGeometry(512,512,32,32).rotateX(-Math.PI/2);terrainGeo.setAttribute('aBiome',new THREE.Float32BufferAttribute(new Float32Array(terrainGeo.attributes.position.count*3),3));const mc=new Float32Array(terrainGeo.attributes.position.count*3);for(let i=0;i<mc.length;i+=3)mc.set([.75,.06,0],i);terrainGeo.setAttribute('aClimate',new THREE.Float32BufferAttribute(mc,3));
+const terrain=new THREE.Mesh(terrainGeo,painter.terrainMaterial());terrain.position.y=-.04;scene.add(terrain);
+const sky=painter.createSky();scene.add(sky.group);const ground=painter.createGroundPaint();scene.add(ground.group);
+const trees=new ValleyTreeBatches(painter.shared);trees.setTrees([{x:-12,y:0,z:-17,radius:.4,height:11,crown:5,seed:23,kind:0,climate:[.75,.06,0]},{x:13,y:0,z:-26,radius:.4,height:13,crown:5,seed:37,kind:1,climate:[.75,.06,0]},{x:26,y:0,z:-44,radius:.3,height:15,crown:3.5,seed:97,kind:3,climate:[.75,.06,0]}],{x:0,z:0});scene.add(trees.group);
+const render=(time=0)=>{ground.follow(camera.position.x,camera.position.z);painter.update(camera,time);painter.render(scene,camera);};
+await painter.ready();await painter.configureClimate({autoTime:false});render();window.climateFixture={renderer,painter,scene,camera,render,trees,ground,ready:true};
+</script></body></html>

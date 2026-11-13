@@ -1,0 +1,10 @@
+{
+  "method": "Actual GPU material, two equivalent endpoint encodings; spatial paint disabled only to isolate categorical blending.",
+  "comparison": {
+    "maximumDifference": 0,
+    "meanDifference": 0,
+    "samples": 3588
+  },
+  "errors": [],
+  "passed": true
+}

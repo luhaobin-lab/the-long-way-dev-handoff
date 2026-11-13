@@ -1,0 +1,18 @@
+{
+  "source": "https://git.patch.gg/blendi/oil-paint.git",
+  "project": "https://patch.gg/blendi/oil-paint",
+  "commit": "804c65fa3a6c6fcdc732ed1bde450fd140cfb4e9",
+  "code_license": "MIT",
+  "art_license": "CC0-1.0",
+  "retrieved_on": "2026-11-13",
+  "files": {
+    "src/oilpaint/brush.js": "2be2a3341f8fb16cb9974175a763c28f924ccc2f43df7edbff177b35505fa54b",
+    "src/oilpaint/common.js": "14b37b64675300f74a8fea61f086b76d85da6abdaf361008a5dbf640bd68d0ca",
+    "src/oilpaint/dabs.js": "cd94a78fb1520f5adce69920fafdfa678b541be5d53057fcd797a72cdab9b357",
+    "src/oilpaint/finish.js": "6e9928388917c72b36a8f4f303d3fed9e27baf81fdb84e78ebc8e7c67130532c",
+    "src/oilpaint/ground.js": "ff161d11dc265b6a0b7f768223bf75b26982cdbf08dc380cca0e0a9a80adb7fc",
+    "src/oilpaint/index.js": "1e9804f0f8d3fcc617f1d333a267c9612c117deb4ff580810814d87a9bbef5b6",
+    "src/oilpaint/pins.js": "3d9087d943dff946066177fc53a6e13ed255d2fcb01523f556d852f0e69bfa2f",
+    "src/oilpaint/shade.js": "6c217276e8d7f110bef96a8e58615dac3df6b2013c5951487d4a6c5377aa4fb0"
+  }
+}

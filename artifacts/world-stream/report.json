@@ -1,0 +1,777 @@
+{
+  "browser": "Chrome channel, macOS headless",
+  "viewport": {
+    "width": 1440,
+    "height": 900,
+    "dpr": 1.5
+  },
+  "method": "Reproducible discontinuous seeks. This verifies regeneration and bounded resources, not continuous 101 km driving.",
+  "runs": [
+    {
+      "s": 240,
+      "loadMs": 797,
+      "state": {
+        "ready": true,
+        "mode": "driving",
+        "camera": "driver seat",
+        "seed": "wildflower",
+        "coordinates": "+Y up,+X east,forward -Z; metres",
+        "automatic": false,
+        "muted": false,
+        "car": {
+          "x": -57.4390320168684,
+          "y": 24.852575935479045,
+          "z": -239.68232336942484,
+          "s": 240,
+          "heading": 0.17741629516148735,
+          "speed": 0,
+          "steering": 0,
+          "pitch": 0.0072784116476874204,
+          "roll": 0,
+          "distance": 0,
+          "lateral": 1.8,
+          "offroad": false,
+          "collision": 0
+        },
+        "look": {
+          "yaw": 0,
+          "pitch": 0
+        },
+        "origin": {
+          "x": 0,
+          "z": 0
+        },
+        "stream": {
+          "terrainChunks": 137,
+          "farHorizon": true,
+          "farBuildRow": -1,
+          "pendingVegetation": 0,
+          "roadChunks": 23,
+          "pendingChunks": 0,
+          "trees": 352,
+          "renderedTrees": 352,
+          "roadPaintMarks": 9991,
+          "generatedChunks": 137,
+          "retiredChunks": 0,
+          "mapReady": true,
+          "mapBuilding": false,
+          "farBuilding": false,
+          "samplerWorker": true,
+          "completedSamplingJobs": 4,
+          "mapBuildRow": -1,
+          "mapResolution": 768,
+          "mapBounds": {
+            "x": -480.6258148631031,
+            "z": -672.8761408083443,
+            "span": 768
+          },
+          "origin": {
+            "x": 0,
+            "z": 0
+          },
+          "maxGenerationMs": 0
+        },
+        "renderer": "painted-valley-0.2.0"
+      },
+      "metrics": {
+        "version": "painted-valley-0.2.0",
+        "reference": "blendi/painted-valley",
+        "seed": "wildflower",
+        "simulatedSeconds": 0,
+        "measurement": "deterministic stepping; FPS invalid",
+        "frames": 5,
+        "sampleCount": 0,
+        "fps": 0,
+        "frameMs": {
+          "mean": 0,
+          "p50": 0,
+          "p95": 0,
+          "p99": 0
+        },
+        "submitMs": {
+          "p50": 1,
+          "p95": 74.69999999925494
+        },
+        "resolution": "2160 × 1350",
+        "cssResolution": "1440 × 900",
+        "nativeDpr": 1.5,
+        "pixelRatio": 1.5,
+        "quality": "retina",
+        "drawCalls": 279,
+        "triangles": 3185589,
+        "memory": {
+          "geometries": 175,
+          "textures": 34
+        },
+        "world": {
+          "terrainChunks": 137,
+          "farHorizon": true,
+          "farBuildRow": -1,
+          "pendingVegetation": 0,
+          "roadChunks": 23,
+          "pendingChunks": 0,
+          "trees": 352,
+          "renderedTrees": 352,
+          "roadPaintMarks": 9991,
+          "generatedChunks": 137,
+          "retiredChunks": 0,
+          "mapReady": true,
+          "mapBuilding": false,
+          "farBuilding": false,
+          "samplerWorker": true,
+          "completedSamplingJobs": 4,
+          "mapBuildRow": -1,
+          "mapResolution": 768,
+          "mapBounds": {
+            "x": -480.6258148631031,
+            "z": -672.8761408083443,
+            "span": 768
+          },
+          "origin": {
+            "x": 0,
+            "z": 0
+          },
+          "maxGenerationMs": 0
+        },
+        "origin": {
+          "x": 0,
+          "z": 0
+        },
+        "vehicle": {
+          "x": -57.4390320168684,
+          "y": 24.852575935479045,
+          "z": -239.68232336942484,
+          "s": 240,
+          "heading": 0.17741629516148735,
+          "speed": 0,
+          "steering": 0,
+          "pitch": 0.0072784116476874204,
+          "roll": 0,
+          "distance": 0,
+          "lateral": 1.8,
+          "offroad": false,
+          "collision": 0
+        },
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+      }
+    },
+    {
+      "s": 256,
+      "loadMs": 794,
+      "state": {
+        "ready": true,
+        "mode": "driving",
+        "camera": "driver seat",
+        "seed": "wildflower",
+        "coordinates": "+Y up,+X east,forward -Z; metres",
+        "automatic": false,
+        "muted": false,
+        "car": {
+          "x": -54.55396910051246,
+          "y": 24.96271605993308,
+          "z": -255.67888171335483,
+          "s": 256,
+          "heading": 0.17935915778536138,
+          "speed": 0,
+          "steering": 0,
+          "pitch": 0.006273685477153195,
+          "roll": 0,
+          "distance": 0,
+          "lateral": 1.8,
+          "offroad": false,
+          "collision": 0
+        },
+        "look": {
+          "yaw": 0,
+          "pitch": 0
+        },
+        "origin": {
+          "x": 0,
+          "z": 0
+        },
+        "stream": {
+          "terrainChunks": 137,
+          "farHorizon": true,
+          "farBuildRow": -1,
+          "pendingVegetation": 0,
+          "roadChunks": 23,
+          "pendingChunks": 0,
+          "trees": 352,
+          "renderedTrees": 352,
+          "roadPaintMarks": 9986,
+          "generatedChunks": 137,
+          "retiredChunks": 0,
+          "mapReady": true,
+          "mapBuilding": false,
+          "farBuilding": false,
+          "samplerWorker": true,
+          "completedSamplingJobs": 6,
+          "mapBuildRow": -1,
+          "mapResolution": 768,
+          "mapBounds": {
+            "x": -480.6258148631031,
+            "z": -672.8761408083443,
+            "span": 768
+          },
+          "origin": {
+            "x": 0,
+            "z": 0
+          },
+          "maxGenerationMs": 6
+        },
+        "renderer": "painted-valley-0.2.0"
+      },
+      "metrics": {
+        "version": "painted-valley-0.2.0",
+        "reference": "blendi/painted-valley",
+        "seed": "wildflower",
+        "simulatedSeconds": 0,
+        "measurement": "deterministic stepping; FPS invalid",
+        "frames": 9,
+        "sampleCount": 0,
+        "fps": 0,
+        "frameMs": {
+          "mean": 0,
+          "p50": 0,
+          "p95": 0,
+          "p99": 0
+        },
+        "submitMs": {
+          "p50": 1,
+          "p95": 74.69999999925494
+        },
+        "resolution": "2160 × 1350",
+        "cssResolution": "1440 × 900",
+        "nativeDpr": 1.5,
+        "pixelRatio": 1.5,
+        "quality": "retina",
+        "drawCalls": 288,
+        "triangles": 3253957,
+        "memory": {
+          "geometries": 180,
+          "textures": 34
+        },
+        "world": {
+          "terrainChunks": 137,
+          "farHorizon": true,
+          "farBuildRow": -1,
+          "pendingVegetation": 0,
+          "roadChunks": 23,
+          "pendingChunks": 0,
+          "trees": 352,
+          "renderedTrees": 352,
+          "roadPaintMarks": 9986,
+          "generatedChunks": 137,
+          "retiredChunks": 0,
+          "mapReady": true,
+          "mapBuilding": false,
+          "farBuilding": false,
+          "samplerWorker": true,
+          "completedSamplingJobs": 6,
+          "mapBuildRow": -1,
+          "mapResolution": 768,
+          "mapBounds": {
+            "x": -480.6258148631031,
+            "z": -672.8761408083443,
+            "span": 768
+          },
+          "origin": {
+            "x": 0,
+            "z": 0
+          },
+          "maxGenerationMs": 6
+        },
+        "origin": {
+          "x": 0,
+          "z": 0
+        },
+        "vehicle": {
+          "x": -54.55396910051246,
+          "y": 24.96271605993308,
+          "z": -255.67888171335483,
+          "s": 256,
+          "heading": 0.17935915778536138,
+          "speed": 0,
+          "steering": 0,
+          "pitch": 0.006273685477153195,
+          "roll": 0,
+          "distance": 0,
+          "lateral": 1.8,
+          "offroad": false,
+          "collision": 0
+        },
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+      }
+    },
+    {
+      "s": 512,
+      "loadMs": 832,
+      "state": {
+        "ready": true,
+        "mode": "driving",
+        "camera": "driver seat",
+        "seed": "wildflower",
+        "coordinates": "+Y up,+X east,forward -Z; metres",
+        "automatic": false,
+        "muted": false,
+        "car": {
+          "x": -13.567179017110483,
+          "y": 25.36360416582812,
+          "z": -511.7713238753282,
+          "s": 512,
+          "heading": 0.12738653594008487,
+          "speed": 0,
+          "steering": 0,
+          "pitch": -0.002277124441677079,
+          "roll": 0,
+          "distance": 0,
+          "lateral": 1.8,
+          "offroad": false,
+          "collision": 0
+        },
+        "look": {
+          "yaw": 0,
+          "pitch": 0
+        },
+        "origin": {
+          "x": 0,
+          "z": -512
+        },
+        "stream": {
+          "terrainChunks": 137,
+          "farHorizon": true,
+          "farBuildRow": -1,
+          "pendingVegetation": 0,
+          "roadChunks": 23,
+          "pendingChunks": 0,
+          "trees": 539,
+          "renderedTrees": 539,
+          "roadPaintMarks": 9991,
+          "generatedChunks": 150,
+          "retiredChunks": 13,
+          "mapReady": true,
+          "mapBuilding": false,
+          "farBuilding": false,
+          "samplerWorker": true,
+          "completedSamplingJobs": 8,
+          "mapBuildRow": -1,
+          "mapResolution": 768,
+          "mapBounds": {
+            "x": -480.6258148631031,
+            "z": -961.2516297262061,
+            "span": 768
+          },
+          "origin": {
+            "x": 0,
+            "z": -512
+          },
+          "maxGenerationMs": 6.1
+        },
+        "renderer": "painted-valley-0.2.0"
+      },
+      "metrics": {
+        "version": "painted-valley-0.2.0",
+        "reference": "blendi/painted-valley",
+        "seed": "wildflower",
+        "simulatedSeconds": 0,
+        "measurement": "deterministic stepping; FPS invalid",
+        "frames": 13,
+        "sampleCount": 0,
+        "fps": 0,
+        "frameMs": {
+          "mean": 0,
+          "p50": 0,
+          "p95": 0,
+          "p99": 0
+        },
+        "submitMs": {
+          "p50": 1,
+          "p95": 74.69999999925494
+        },
+        "resolution": "2160 × 1350",
+        "cssResolution": "1440 × 900",
+        "nativeDpr": 1.5,
+        "pixelRatio": 1.5,
+        "quality": "retina",
+        "drawCalls": 293,
+        "triangles": 4338529,
+        "memory": {
+          "geometries": 203,
+          "textures": 34
+        },
+        "world": {
+          "terrainChunks": 137,
+          "farHorizon": true,
+          "farBuildRow": -1,
+          "pendingVegetation": 0,
+          "roadChunks": 23,
+          "pendingChunks": 0,
+          "trees": 539,
+          "renderedTrees": 539,
+          "roadPaintMarks": 9991,
+          "generatedChunks": 150,
+          "retiredChunks": 13,
+          "mapReady": true,
+          "mapBuilding": false,
+          "farBuilding": false,
+          "samplerWorker": true,
+          "completedSamplingJobs": 8,
+          "mapBuildRow": -1,
+          "mapResolution": 768,
+          "mapBounds": {
+            "x": -480.6258148631031,
+            "z": -961.2516297262061,
+            "span": 768
+          },
+          "origin": {
+            "x": 0,
+            "z": -512
+          },
+          "maxGenerationMs": 6.1
+        },
+        "origin": {
+          "x": 0,
+          "z": -512
+        },
+        "vehicle": {
+          "x": -13.567179017110483,
+          "y": 25.36360416582812,
+          "z": -511.7713238753282,
+          "s": 512,
+          "heading": 0.12738653594008487,
+          "speed": 0,
+          "steering": 0,
+          "pitch": -0.002277124441677079,
+          "roll": 0,
+          "distance": 0,
+          "lateral": 1.8,
+          "offroad": false,
+          "collision": 0
+        },
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+      }
+    },
+    {
+      "s": 2048,
+      "loadMs": 1297,
+      "state": {
+        "ready": true,
+        "mode": "driving",
+        "camera": "driver seat",
+        "seed": "wildflower",
+        "coordinates": "+Y up,+X east,forward -Z; metres",
+        "automatic": false,
+        "muted": false,
+        "car": {
+          "x": 196.68123754774538,
+          "y": 21.795887808641982,
+          "z": -2048.0685730865607,
+          "s": 2048,
+          "heading": -0.03810538015983233,
+          "speed": 0,
+          "steering": 0,
+          "pitch": 0.007354631844925927,
+          "roll": 0,
+          "distance": 0,
+          "lateral": 1.8,
+          "offroad": false,
+          "collision": 0
+        },
+        "look": {
+          "yaw": 0,
+          "pitch": 0
+        },
+        "origin": {
+          "x": 0,
+          "z": -2048
+        },
+        "stream": {
+          "terrainChunks": 137,
+          "farHorizon": true,
+          "farBuildRow": -1,
+          "pendingVegetation": 0,
+          "roadChunks": 23,
+          "pendingChunks": 0,
+          "trees": 858,
+          "renderedTrees": 858,
+          "roadPaintMarks": 9990,
+          "generatedChunks": 239,
+          "retiredChunks": 102,
+          "mapReady": true,
+          "mapBuilding": false,
+          "farBuilding": false,
+          "samplerWorker": true,
+          "completedSamplingJobs": 10,
+          "mapBuildRow": -1,
+          "mapResolution": 768,
+          "mapBounds": {
+            "x": -192.25032594524123,
+            "z": -2499.254237288136,
+            "span": 768
+          },
+          "origin": {
+            "x": 0,
+            "z": -2048
+          },
+          "maxGenerationMs": 6.1
+        },
+        "renderer": "painted-valley-0.2.0"
+      },
+      "metrics": {
+        "version": "painted-valley-0.2.0",
+        "reference": "blendi/painted-valley",
+        "seed": "wildflower",
+        "simulatedSeconds": 0,
+        "measurement": "deterministic stepping; FPS invalid",
+        "frames": 17,
+        "sampleCount": 0,
+        "fps": 0,
+        "frameMs": {
+          "mean": 0,
+          "p50": 0,
+          "p95": 0,
+          "p99": 0
+        },
+        "submitMs": {
+          "p50": 1,
+          "p95": 74.69999999925494
+        },
+        "resolution": "2160 × 1350",
+        "cssResolution": "1440 × 900",
+        "nativeDpr": 1.5,
+        "pixelRatio": 1.5,
+        "quality": "retina",
+        "drawCalls": 319,
+        "triangles": 6210403,
+        "memory": {
+          "geometries": 265,
+          "textures": 34
+        },
+        "world": {
+          "terrainChunks": 137,
+          "farHorizon": true,
+          "farBuildRow": -1,
+          "pendingVegetation": 0,
+          "roadChunks": 23,
+          "pendingChunks": 0,
+          "trees": 858,
+          "renderedTrees": 858,
+          "roadPaintMarks": 9990,
+          "generatedChunks": 239,
+          "retiredChunks": 102,
+          "mapReady": true,
+          "mapBuilding": false,
+          "farBuilding": false,
+          "samplerWorker": true,
+          "completedSamplingJobs": 10,
+          "mapBuildRow": -1,
+          "mapResolution": 768,
+          "mapBounds": {
+            "x": -192.25032594524123,
+            "z": -2499.254237288136,
+            "span": 768
+          },
+          "origin": {
+            "x": 0,
+            "z": -2048
+          },
+          "maxGenerationMs": 6.1
+        },
+        "origin": {
+          "x": 0,
+          "z": -2048
+        },
+        "vehicle": {
+          "x": 196.68123754774538,
+          "y": 21.795887808641982,
+          "z": -2048.0685730865607,
+          "s": 2048,
+          "heading": -0.03810538015983233,
+          "speed": 0,
+          "steering": 0,
+          "pitch": 0.007354631844925927,
+          "roll": 0,
+          "distance": 0,
+          "lateral": 1.8,
+          "offroad": false,
+          "collision": 0
+        },
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+      }
+    },
+    {
+      "s": 101000,
+      "loadMs": 1494,
+      "state": {
+        "ready": true,
+        "mode": "driving",
+        "camera": "driver seat",
+        "seed": "wildflower",
+        "coordinates": "+Y up,+X east,forward -Z; metres",
+        "automatic": false,
+        "muted": false,
+        "car": {
+          "x": -116.94926963516508,
+          "y": 26.304500126902703,
+          "z": -100999.77718318228,
+          "s": 101000,
+          "heading": 0.1241054578214368,
+          "speed": 0,
+          "steering": 0,
+          "pitch": -0.0016489918668467067,
+          "roll": 0,
+          "distance": 0,
+          "lateral": 1.8,
+          "offroad": false,
+          "collision": 0
+        },
+        "look": {
+          "yaw": 0,
+          "pitch": 0
+        },
+        "origin": {
+          "x": 0,
+          "z": -100864
+        },
+        "stream": {
+          "terrainChunks": 137,
+          "farHorizon": true,
+          "farBuildRow": -1,
+          "pendingVegetation": 0,
+          "roadChunks": 23,
+          "pendingChunks": 0,
+          "trees": 702,
+          "renderedTrees": 702,
+          "roadPaintMarks": 9988,
+          "generatedChunks": 376,
+          "retiredChunks": 239,
+          "mapReady": true,
+          "mapBuilding": false,
+          "farBuilding": false,
+          "samplerWorker": true,
+          "completedSamplingJobs": 12,
+          "mapBuildRow": -1,
+          "mapResolution": 768,
+          "mapBounds": {
+            "x": -576.7509778357237,
+            "z": -101412.04693611476,
+            "span": 768
+          },
+          "origin": {
+            "x": 0,
+            "z": -100864
+          },
+          "maxGenerationMs": 6.1
+        },
+        "renderer": "painted-valley-0.2.0"
+      },
+      "metrics": {
+        "version": "painted-valley-0.2.0",
+        "reference": "blendi/painted-valley",
+        "seed": "wildflower",
+        "simulatedSeconds": 0,
+        "measurement": "deterministic stepping; FPS invalid",
+        "frames": 21,
+        "sampleCount": 0,
+        "fps": 0,
+        "frameMs": {
+          "mean": 0,
+          "p50": 0,
+          "p95": 0,
+          "p99": 0
+        },
+        "submitMs": {
+          "p50": 0.900000000372529,
+          "p95": 4.400000000372529
+        },
+        "resolution": "2160 × 1350",
+        "cssResolution": "1440 × 900",
+        "nativeDpr": 1.5,
+        "pixelRatio": 1.5,
+        "quality": "retina",
+        "drawCalls": 288,
+        "triangles": 5208725,
+        "memory": {
+          "geometries": 180,
+          "textures": 34
+        },
+        "world": {
+          "terrainChunks": 137,
+          "farHorizon": true,
+          "farBuildRow": -1,
+          "pendingVegetation": 0,
+          "roadChunks": 23,
+          "pendingChunks": 0,
+          "trees": 702,
+          "renderedTrees": 702,
+          "roadPaintMarks": 9988,
+          "generatedChunks": 376,
+          "retiredChunks": 239,
+          "mapReady": true,
+          "mapBuilding": false,
+          "farBuilding": false,
+          "samplerWorker": true,
+          "completedSamplingJobs": 12,
+          "mapBuildRow": -1,
+          "mapResolution": 768,
+          "mapBounds": {
+            "x": -576.7509778357237,
+            "z": -101412.04693611476,
+            "span": 768
+          },
+          "origin": {
+            "x": 0,
+            "z": -100864
+          },
+          "maxGenerationMs": 6.1
+        },
+        "origin": {
+          "x": 0,
+          "z": -100864
+        },
+        "vehicle": {
+          "x": -116.94926963516508,
+          "y": 26.304500126902703,
+          "z": -100999.77718318228,
+          "s": 101000,
+          "heading": 0.1241054578214368,
+          "speed": 0,
+          "steering": 0,
+          "pitch": -0.0016489918668467067,
+          "roll": 0,
+          "distance": 0,
+          "lateral": 1.8,
+          "offroad": false,
+          "collision": 0
+        },
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+      }
+    }
+  ],
+  "checks": [
+    {
+      "name": "worker completed sampling",
+      "pass": true
+    },
+    {
+      "name": "bounded terrain tiles",
+      "pass": true
+    },
+    {
+      "name": "bounded road sections",
+      "pass": true
+    },
+    {
+      "name": "all capture coverage settled",
+      "pass": true
+    },
+    {
+      "name": "no console or shader errors",
+      "pass": false
+    }
+  ],
+  "errors": [
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ]
+}

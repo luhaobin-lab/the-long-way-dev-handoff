@@ -1,0 +1,18 @@
+<!doctype html><html><head><meta charset="UTF-8"><link rel="icon" href="data:,"><style>body{margin:0}canvas{display:block}</style></head><body><script type="module">
+import * as THREE from '/node_modules/three/build/three.module.js';
+import {ValleyPainter} from '/src/render/ValleyPainter.ts';
+const renderer=new THREE.WebGLRenderer({antialias:false});renderer.setSize(innerWidth,innerHeight);document.body.appendChild(renderer.domElement);
+const painter=new ValleyPainter(renderer),scene=new THREE.Scene(),camera=new THREE.PerspectiveCamera(65,innerWidth/innerHeight,.05,6000);
+camera.position.set(0,3,7);camera.lookAt(0,3,-40);camera.updateMatrixWorld(true);
+const N=257,span=512,data=new Float32Array(N*N),land=new Uint8Array(N*N*4);
+for(let j=0;j<N;j++)for(let i=0;i<N;i++){data[i+j*N]=0;land[(i+j*N)*4+2]=130;}
+const heights=new THREE.DataTexture(data,N,N,THREE.RedFormat,THREE.FloatType);heights.minFilter=heights.magFilter=THREE.LinearFilter;heights.needsUpdate=true;
+const lands=new THREE.DataTexture(land,N,N);lands.minFilter=lands.magFilter=THREE.LinearFilter;lands.needsUpdate=true;
+painter.setLandMaps(heights,lands,-256,-256,span,N);
+const terrain=new THREE.Mesh(new THREE.PlaneGeometry(512,512).rotateX(-Math.PI/2),painter.terrainMaterial());terrain.position.y=-.04;scene.add(terrain);
+const box=new THREE.Mesh(new THREE.BoxGeometry(3,2,3));box.position.set(-4,1,-8);scene.add(box);painter.paintMesh(box,'cream',{stroke:[.08,.22],density:1.1});
+const wheel=new THREE.Mesh(new THREE.TorusGeometry(.9,.12,12,40));wheel.position.set(2,1.2,-4);scene.add(wheel);painter.paintMesh(wheel,{light:[.27,.33,.28],mid:[.15,.23,.21],shade:[.08,.15,.13]},{stroke:[.035,.1],density:1.0});
+const sky=painter.createSky();scene.add(sky.group);const ground=painter.createGroundPaint();scene.add(ground.group);
+const render=()=>{ground.follow(camera.position.x,camera.position.z);painter.update(camera,0);painter.render(scene,camera);};
+await painter.ready();render();window.smoke={renderer,painter,scene,camera,render,box,wheel,ground,ready:true};
+</script></body></html>

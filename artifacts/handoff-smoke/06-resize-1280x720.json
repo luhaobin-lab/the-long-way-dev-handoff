@@ -1,0 +1,68 @@
+{
+  "ready": true,
+  "mode": "driving",
+  "camera": "driver seat",
+  "seed": "wildflower",
+  "coordinates": "+Y up,+X east,forward -Z; metres",
+  "automatic": false,
+  "muted": true,
+  "car": {
+    "x": 375.3880694982781,
+    "y": 75.19364951235512,
+    "z": -432.21872407309183,
+    "s": 432.4615782348063,
+    "heading": 0.135331693098431,
+    "speed": 0,
+    "steering": 0,
+    "pitch": 0.0004975307366873566,
+    "roll": 0,
+    "distance": 197.84804488117715,
+    "lateral": 1.8,
+    "offroad": false,
+    "collision": 0
+  },
+  "look": {
+    "yaw": 0,
+    "pitch": 0
+  },
+  "origin": {
+    "x": 512,
+    "z": -512
+  },
+  "stream": {
+    "terrainChunks": 137,
+    "farHorizon": true,
+    "ultraHorizon": true,
+    "horizonRadius": 24576,
+    "farBuildRow": -1,
+    "pendingVegetation": 0,
+    "roadChunks": 23,
+    "pendingChunks": 0,
+    "trees": 231,
+    "renderedTrees": 231,
+    "roadPaintMarks": 9983,
+    "buildings": 0,
+    "props": 78,
+    "biome": "coast",
+    "generatedChunks": 150,
+    "retiredChunks": 13,
+    "mapReady": true,
+    "mapBuilding": false,
+    "farBuilding": false,
+    "samplerWorker": true,
+    "completedSamplingJobs": 4,
+    "mapBuildRow": -1,
+    "mapResolution": 768,
+    "mapBounds": {
+      "x": -96.12516297262061,
+      "z": -769.0013037809649,
+      "span": 768
+    },
+    "origin": {
+      "x": 512,
+      "z": -512
+    },
+    "maxGenerationMs": 12.4
+  },
+  "renderer": "painted-valley-0.2.0"
+}
